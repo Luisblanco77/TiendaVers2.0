@@ -11,7 +11,7 @@ import lombok.Data;
 public class Categoria implements Serializable{
     
     private static final Long serialVersionUID= 1L;
-    
+    /*Se quita el private categoria y se hace un objeto*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name="id_categoria")
