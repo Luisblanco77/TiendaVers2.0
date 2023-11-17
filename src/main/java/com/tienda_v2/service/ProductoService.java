@@ -17,4 +17,16 @@ public interface ProductoService {
     //Se elimina una producto segun el id pasado
     
     public void delete(Producto producto);
+    
+      //Metodo para obtener un listado de productos, 
+    //filtrado por precio, ordenado por descripcion.
+    
+    public List<Producto> consultaQuery(
+            double precioInf, double precioSup);
+    
+     //Metodo para JPQL obtener un listado de productos, 
+    //filtrado por precio, ordenado por descripcion.
+    
+    public List<Producto> consultaJPQL(
+            double precioInf, double precioSup);
 }
