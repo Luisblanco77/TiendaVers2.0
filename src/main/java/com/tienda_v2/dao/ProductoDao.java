@@ -20,5 +20,11 @@ public interface ProductoDao
     public List<Producto> consultaJPQL(
             double precioInf, double precioSup);
     
+    //Metodo que usa SQL un listado de prodcutos, 
+    //filtrado por precio, ordenado por descripcion.
+    @Query(nativeQuery=true,value="Select * from Producto a where a.precio between :precioInf and :precioSup order by a.descripcion asc")
+    public List<Producto> consultaSQL(
+            double precioInf, double precioSup);
+    
     
 }

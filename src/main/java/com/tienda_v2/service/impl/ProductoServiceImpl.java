@@ -65,4 +65,13 @@ public class ProductoServiceImpl implements ProductoService {
         return productoDao.consultaJPQL(precioInf, precioSup);
                 
     }
+    //Metodo para obtener un listado de productos, 
+    //filtrado por precio, ordenado por descripcion.
+    @Transactional(readOnly = true)
+    @Override
+    public List<Producto> consultaSQL(
+            double precioInf, double precioSup) {
+        return productoDao.consultaSQL(precioInf, precioSup);
+                
+    }
 }

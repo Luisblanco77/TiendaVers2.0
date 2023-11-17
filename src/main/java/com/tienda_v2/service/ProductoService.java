@@ -29,4 +29,9 @@ public interface ProductoService {
     
     public List<Producto> consultaJPQL(
             double precioInf, double precioSup);
+    //Metodo para SQL obtener un listado de productos, 
+    //filtrado por precio, ordenado por descripcion.
+    
+    public List<Producto> consultaSQL(
+            double precioInf, double precioSup);
 }

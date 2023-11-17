@@ -81,5 +81,15 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
-    
+    @PostMapping("/query3")
+    public String consulta3(@RequestParam(value = "precioInf") double precioInf,
+            @RequestParam(value = "precioSup") double precioSup,
+            Model model) {
+
+        var productos = productoService.consultaSQL(precioInf, precioSup);
+        model.addAttribute("productos", productos);
+        model.addAttribute("precioInf", precioInf);
+        model.addAttribute("precioSup", precioSup);
+        return "/pruebas/listado2";
+    }
 }
