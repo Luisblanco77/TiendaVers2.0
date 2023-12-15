@@ -27,4 +27,12 @@ public class Producto implements Serializable{
    @JoinColumn(name="id_categoria")
    private Categoria categoria;
     
+   
+   
+
+    public boolean isActivo() {
+        // Implementation
+        return true; // Replace with your logic
+    }
 }
+

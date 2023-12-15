@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 public interface ProductoDao 
         extends JpaRepository<Producto, Long>{
     
+
+    
     //Metodo que usa Query un listado de productos, 
     //filtrado por precio, ordenado por descripcion.
     
